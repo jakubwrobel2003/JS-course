@@ -23,20 +23,29 @@ let myCurrentJob ="teacher"
   myFirstJob
  )
 */
-true;
-let javaScriptIsFun = true;
-console.log(javaScriptIsFun);
+// true;
+// let javaScriptIsFun = true;
+// console.log(javaScriptIsFun);
 
-console.log(typeof true);
-console.log(typeof javaScriptIsFun);
-console.log(typeof 23);
-console.log(typeof "jonas");
-javaScriptIsFun = "yes!";
-console.log(typeof javaScriptIsFun);
-let year;
-console.log(year);
-console.log(typeof year);
-year = 1991;
-console.log(year);
-console.log(typeof year);
-console.log(typeof null);
+// console.log(typeof true);
+// console.log(typeof javaScriptIsFun);
+// console.log(typeof 23);
+// console.log(typeof "jonas");
+// javaScriptIsFun = "yes!";
+// console.log(typeof javaScriptIsFun);
+// let year;
+// console.log(year);
+// console.log(typeof year);
+// year = 1991;
+// console.log(year);
+// console.log(typeof year);
+// console.log(typeof null);
+let age = 30;
+age = 31;
+const birthYear = 1991;
+// birthYear = 1990;
+// const job;
+var job = "programer";
+job = "teacher";
+lastName = "wrobel";
+console.log(lastName);
