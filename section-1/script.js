@@ -71,17 +71,35 @@ let myCurrentJob ="teacher"
 // const ageSarah = now - 2018;
 // console.log(now - 1991 > now - 2018);
 
-////////////////////////////////////
-//Challange #1
-////////////////////////////////////
-const marksMass = 78;
-const marksHight = 1.69;
-const johnMass = 92;
-const johnHight = 1.95;
+// ////////////////////////////////////
+// //Challange #1
+// ////////////////////////////////////
+// const marksMass = 78;
+// const marksHight = 1.69;
+// const johnMass = 92;
+// const johnHight = 1.95;
 
-const firstGuyBMI = marksMass / (marksHight * marksHight);
-console.log(firstGuyBMI);
-const secGuyBMI = johnMass / (johnHight * johnHight);
-console.log(secGuyBMI);
-let markHugherBMI = firstGuyBMI > secGuyBMI;
-console.log(markHugherBMI);
+// const firstGuyBMI = marksMass / (marksHight * marksHight);
+// console.log(firstGuyBMI);
+// const secGuyBMI = johnMass / (johnHight * johnHight);
+// console.log(secGuyBMI);
+// let markHugherBMI = firstGuyBMI > secGuyBMI;
+// console.log(markHugherBMI);
+
+const firstName = "jonas";
+const job = "teacher";
+const birthDay = 1991;
+const year = 2037;
+const jonas =
+  "I'm " + firstName + ", a " + (year - birthDay) + " years old " + job + "!";
+console.log(jonas);
+const jonasNew = `I'm ${firstName}, a ${year - birthDay} years old ${job}!`;
+console.log(jonasNew);
+console.log(`Just a regular string...`);
+console.log("String with \n\
+multiple\n\
+lines");
+
+console.log(`String
+multiple
+line`);
