@@ -86,20 +86,42 @@ let myCurrentJob ="teacher"
 // let markHugherBMI = firstGuyBMI > secGuyBMI;
 // console.log(markHugherBMI);
 
-const firstName = "jonas";
-const job = "teacher";
-const birthDay = 1991;
-const year = 2037;
-const jonas =
-  "I'm " + firstName + ", a " + (year - birthDay) + " years old " + job + "!";
-console.log(jonas);
-const jonasNew = `I'm ${firstName}, a ${year - birthDay} years old ${job}!`;
-console.log(jonasNew);
-console.log(`Just a regular string...`);
-console.log("String with \n\
-multiple\n\
-lines");
+// const firstName = "jonas";
+// const job = "teacher";
+// const birthDay = 1991;
+// const year = 2037;
+// const jonas =
+//   "I'm " + firstName + ", a " + (year - birthDay) + " years old " + job + "!";
+// console.log(jonas);
+// const jonasNew = `I'm ${firstName}, a ${year - birthDay} years old ${job}!`;
+// console.log(jonasNew);
+// console.log(`Just a regular string...`);
+// console.log("String with \n\
+// multiple\n\
+// lines");
 
-console.log(`String
-multiple
-line`);
+// console.log(`String
+// multiple
+// line`);
+
+// const age = 19;
+// // const isOldEnouch = age >= 18;
+
+// if (age >= 18) {
+//   console.log("Sarah can start driving licence");
+// } else {
+//   const yearLeft = 18 - age;
+//   console.log(`Sarah is too young. Wait another ${yearLeft} years:)`);
+// }
+// const birthYear = 1991;
+// let century;
+// if (birthYear <= 2000) {
+//   century = 20;
+// } else {
+//   century = 21;
+// }
+// console.log(century);
+
+// ////////////////////////////////////
+// //Challange #2
+// ////////////////////////////////////
