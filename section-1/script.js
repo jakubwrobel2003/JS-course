@@ -201,5 +201,95 @@ let myCurrentJob ="teacher"
 // if (fav !== 23) console.log("why no 23");
 ////////////////////////////////////////////////
 ////////////////////////
-const hasDriversLicense = true;
-const hasGoodVisoin = true;
+// const hasDriversLicense = true;
+// const hasGoodVisoin = true;
+
+// console.log(hasDriversLicense && hasGoodVisoin);
+// console.log(hasDriversLicense || hasGoodVisoin);
+// console.log(!hasDriversLicense);
+
+// const isTired = true;
+// console.log(hasDriversLicense && hasGoodVisoin && isTired);
+// if (hasDriversLicense && hasGoodVisoin && !isTired) {
+//   console.log("sarah is able to drive!");
+// } else {
+//   console.log("someone else should drive...");
+// }
+// ////////////////////////////////////
+// //Challange #3
+// ////////////////////////////////////
+let winDolphins = 0;
+let winKoalas = 0;
+// Dolphins
+const firstMatchDolphins = 96;
+const secondMatchDolphins = 108;
+const thirtMatchDolphins = 89;
+// Koalas
+const firstMatchKoalas = 88;
+const secondMatchKoalas = 91;
+const thirtMatchKoalas = 110;
+
+if (firstMatchDolphins > firstMatchKoalas) {
+  if (firstMatchDolphins > 100 && !firstMatchKoalas > 100) {
+    winDolphins++;
+    // console.log(winDolphins);
+    console.log("Dolphis win a match");
+  } else {
+    console.log("Draw");
+  }
+} else if (firstMatchKoalas > firstMatchDolphins) {
+  if (!firstMatchDolphins > 100 && firstMatchKoalas > 100) {
+    winKoalas++;
+    // console.log(winKoalas);
+    console.log("Koalas win a match");
+  } else {
+    console.log("Draw");
+  }
+} else {
+  console.log("Draw");
+}
+if (secondMatchDolphins > secondMatchKoalas) {
+  if (secondMatchDolphins > 100 && secondMatchKoalas < 100) {
+    winDolphins++;
+    // console.log(winDolphins);
+    console.log("Dolphis win a match");
+  } else {
+    console.log("Draw");
+  }
+} else if (secondMatchKoalas > secondMatchDolphins) {
+  if (secondMatchDolphins < 100 && secondMatchKoalas > 100) {
+    winKoalas++;
+    console.log(winKoalas);
+    console.log("Koalas win a match");
+  } else {
+    console.log("Draw");
+  }
+} else {
+  console.log("Draw");
+}
+
+if (thirtMatchDolphins > thirtMatchKoalas) {
+  if (thirtMatchDolphins > 100 && thirtMatchKoalas < 100) {
+    winDolphins++;
+    console.log("Dolphis win a match");
+  } else {
+    console.log("Draw");
+  }
+} else if (thirtMatchKoalas > thirtMatchDolphins) {
+  if (thirtMatchDolphins < 100 && thirtMatchKoalas > 100) {
+    winKoalas++;
+    console.log("Koalas win a match");
+  } else {
+    console.log("Draw");
+  }
+} else {
+  console.log("Draw");
+}
+
+if (winDolphins > winKoalas) {
+  console.log("Dolphis win");
+} else if (winKoalas > winDolphins) {
+  console.log("Koalas win");
+} else {
+  console.log("draw");
+}
