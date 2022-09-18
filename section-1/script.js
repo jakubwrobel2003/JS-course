@@ -295,27 +295,58 @@ let myCurrentJob ="teacher"
 // }
 ////////////////////////////////////////////////
 ////////////////////////
-const day = "monday";
+// const day = "monday";
 
-switch (day) {
-  case "monday": //day === 'monday'
-    console.log("Plan course structur");
-    console.log("Go to coding meetup");
-    break;
-  case "tuesday": //day === 'monday'
-    console.log("Preaper theory videos");
-    break;
-  case "wednesday":
-  case "thursay": //day === 'monday'
-    console.log("Write code examples");
-    break;
-  case "friday": //day === 'monday'
-    console.log("Record videos");
-    break;
-  case "saturday":
-  case "sunday":
-    console.log("Enjoy the weekend :D");
-    break;
-  default:
-    console.log("Not a valid day!");
-}
+// switch (day) {
+//   case "monday": //day === 'monday'
+//     console.log("Plan course structur");
+//     console.log("Go to coding meetup");
+//     break;
+//   case "tuesday": //day === 'monday'
+//     console.log("Preaper theory videos");
+//     break;
+//   case "wednesday":
+//   case "thursay": //day === 'monday'
+//     console.log("Write code examples");
+//     break;
+//   case "friday": //day === 'monday'
+//     console.log("Record videos");
+//     break;
+//   case "saturday":
+//   case "sunday":
+//     console.log("Enjoy the weekend :D");
+//     break;
+//   default:
+//     console.log("Not a valid day!");
+// }
+////////////////////////////////////////////////
+////////////////////////
+// const age = 23;
+// age >= 18
+//   ? console.log("I like to dring wine ")
+//   : console.log("I like to dring water ");
+
+// const drink = age >= 18 ? "wine " : "water ";
+// console.log(drink);
+
+// let drink2;
+// if (age >= 18) {
+//   drink2 = "wine";
+// } else {
+//   drink2 = "water";
+// }
+// console.log(drink2);
+// console.log(`I like to drink ${age >= 18 ? "wine" : "water"}`);
+// ////////////////////////////////////
+// //Challange #4
+// ////////////////////////////////////
+
+// const bill = 275;
+// const tipSmall = 0.15;
+// const tipBig = 0.2;
+
+// const finishBill =
+//   bill >= 50 && bill <= 300 ? bill + bill * tipSmall : bill + bill * tipBig;
+// console.log(
+//   `The bill was ${bill}, the tip was ${finishBill - bill} and ${finishBill}`
+// );
