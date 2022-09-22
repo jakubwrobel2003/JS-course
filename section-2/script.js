@@ -63,16 +63,34 @@
 ////////////////////////////////////
 /////
 
-function cutFruitPieces(fruit) {
-  return fruit * 4;
-}
+// function cutFruitPieces(fruit) {
+//   return fruit * 4;
+// }
 
-function fruitProcessor(apples, ogranges) {
-  const applePieces = cutFruitPieces(apples);
-  const orangePieces = cutFruitPieces(ogranges);
-  // console.log(apples, ogranges);
-  const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange`;
-  return juice;
-}
+// function fruitProcessor(apples, ogranges) {
+//   const applePieces = cutFruitPieces(apples);
+//   const orangePieces = cutFruitPieces(ogranges);
+//   // console.log(apples, ogranges);
+//   const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange`;
+//   return juice;
+// }
 
-console.log(fruitProcessor(2, 3));
+// console.log(fruitProcessor(2, 3));
+const calcAge = function (birthYeah) {
+  return 2037 - birthYeah;
+};
+
+const yearsUntilRetirement = function (birthYeah, firstname) {
+  const age = calcAge(birthYeah);
+  const retirement = 65 - age;
+
+  if (retirement > 0) {
+    console.log(`${firstname} retires in ${retirement} years`);
+    return retirement;
+  } else {
+    console.log(`${firstname} has already retired`);
+    return -1;
+  }
+};
+console.log(yearsUntilRetirement(1991, "Kuba"));
+console.log(yearsUntilRetirement(1970, "Bob"));
