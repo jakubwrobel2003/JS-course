@@ -236,3 +236,18 @@ if (friends.includes("Steven")) {
 
 // ////////////////////////////////////
 //Object
+const jonasArray = [
+  "Jonas",
+  "Schmedtman",
+  2037 - 1991,
+  "teacher",
+  ["Michale", "Peter", "Steven"],
+];
+
+const jonas = {
+  fristName: "Jonas",
+  lastName: "Schmedtman",
+  age: 2037 - 1991,
+  job: "teacher",
+  friends: ["Michale", "Peter", "Steven"],
+};
