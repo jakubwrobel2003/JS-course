@@ -129,46 +129,110 @@
 //
 // Array
 
-const friend1 = "Michael";
-const friend2 = "Steven";
-const friend3 = "Peter";
+// const friend1 = "Michael";
+// const friend2 = "Steven";
+// const friend3 = "Peter";
 
+// const friends = ["Michael", "Steven", "Peter"];
+// console.log(friends);
+
+// // const years = new Array(1991, 1984, 2008, 2020);
+
+// console.log(friends[0]);
+// console.log(friends[2]);
+
+// console.log(friends.length);
+// console.log(friends[friends.length - 1]);
+
+// friends[2] = "Jay";
+// console.log(friends);
+
+// const firstname = "Kuba";
+// const kuba = [firstname, "Wrobel", 2037 - 2003, "Student", friends];
+// console.log(kuba);
+// console.log(kuba.length);
+
+// //Exercise
+// const calcAge = function (birthYeah) {
+//   return 2037 - birthYeah;
+// };
+
+// const years = [1990, 1967, 2002, 2010, 2018];
+
+// calcAge(years[0]);
+// console.log(calcAge(years[3]));
+
+// const age1 = calcAge(years[0]);
+// const age2 = calcAge(years[1]);
+// const age3 = calcAge(years[years.length - 1]);
+// console.log(age1, age2, age3);
+// const ages = [
+//   calcAge(years[0]),
+//   calcAge(years[1]),
+//   calcAge(years[years.length - 1]),
+// ];
+// console.log(ages);
+
+//
+// ////////////////////////////////////
+//
 const friends = ["Michael", "Steven", "Peter"];
+
+// Add elements
+const newLength = friends.push("Jay");
+console.log(friends);
+console.log(newLength);
+
+friends.unshift("John");
 console.log(friends);
 
-// const years = new Array(1991, 1984, 2008, 2020);
+// Reemove elements
 
-console.log(friends[0]);
-console.log(friends[2]);
+friends.pop();
 
-console.log(friends.length);
-console.log(friends[friends.length - 1]);
-
-friends[2] = "Jay";
+const popped = friends.pop();
+console.log(popped);
 console.log(friends);
 
-const firstname = "Kuba";
-const kuba = [firstname, "Wrobel", 2037 - 2003, "Student", friends];
-console.log(kuba);
-console.log(kuba.length);
+friends.shift();
+console.log(friends);
 
-//Exercise
-const calcAge = function (birthYeah) {
-  return 2037 - birthYeah;
-};
+console.log(friends.indexOf("Steven"));
+console.log(friends.indexOf("Bob"));
 
-const years = [1990, 1967, 2002, 2010, 2018];
+friends.push(23);
+console.log(friends.includes("Steven"));
+console.log(friends.includes("Bob"));
+console.log(friends.includes("23"));
+console.log(friends.includes(23));
 
-calcAge(years[0]);
-console.log(calcAge(years[3]));
+if (friends.includes("Steven")) {
+  console.log("You have a friend called Steven");
+}
+// ////////////////////////////////////
+// //Challange #2
+// ////////////////////////////////////
+// const bill = 275;
 
-const age1 = calcAge(years[0]);
-const age2 = calcAge(years[1]);
-const age3 = calcAge(years[years.length - 1]);
-console.log(age1, age2, age3);
-const ages = [
-  calcAge(years[0]),
-  calcAge(years[1]),
-  calcAge(years[years.length - 1]),
-];
-console.log(ages);
+// const finishBill =
+//   bill >= 50 && bill <= 300 ? bill + bill * tipSmall : bill + bill * tipBig;
+// const bill = [125, 555, 44];
+// function finishBill(bill) {
+//   const tipSmall = 0.15;
+//   const tipBig = 0.2;
+//   if (bill >= 50 && bill <= 300) {
+//     return bill + bill * tipSmall;
+//   } else {
+//     return bill + bill * tipBig;
+//   }
+// }
+// const total = [finishBill(bill[0]), finishBill(bill[1]), finishBill(bill[2])];
+// console.log(
+//   `The bill was ${bill[0]}, the tip was ${
+//     finishBill(bill[0]) - bill[0]
+//   } and ${finishBill(bill[0])}`
+// );
+// console.log(total);
+
+// ////////////////////////////////////
+//Object
