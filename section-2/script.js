@@ -176,39 +176,39 @@
 //
 // ////////////////////////////////////
 //
-const friends = ["Michael", "Steven", "Peter"];
+// const friends = ["Michael", "Steven", "Peter"];
 
 // Add elements
-const newLength = friends.push("Jay");
-console.log(friends);
-console.log(newLength);
+// const newLength = friends.push("Jay");
+// console.log(friends);
+// console.log(newLength);
 
-friends.unshift("John");
-console.log(friends);
+// friends.unshift("John");
+// console.log(friends);
 
 // Reemove elements
 
-friends.pop();
+// friends.pop();
 
-const popped = friends.pop();
-console.log(popped);
-console.log(friends);
+// const popped = friends.pop();
+// console.log(popped);
+// console.log(friends);
 
-friends.shift();
-console.log(friends);
+// friends.shift();
+// console.log(friends);
 
-console.log(friends.indexOf("Steven"));
-console.log(friends.indexOf("Bob"));
+// console.log(friends.indexOf("Steven"));
+// console.log(friends.indexOf("Bob"));
 
-friends.push(23);
-console.log(friends.includes("Steven"));
-console.log(friends.includes("Bob"));
-console.log(friends.includes("23"));
-console.log(friends.includes(23));
+// friends.push(23);
+// console.log(friends.includes("Steven"));
+// console.log(friends.includes("Bob"));
+// console.log(friends.includes("23"));
+// console.log(friends.includes(23));
 
-if (friends.includes("Steven")) {
-  console.log("You have a friend called Steven");
-}
+// if (friends.includes("Steven")) {
+//   console.log("You have a friend called Steven");
+// }
 // ////////////////////////////////////
 // //Challange #2
 // ////////////////////////////////////
@@ -236,18 +236,86 @@ if (friends.includes("Steven")) {
 
 // ////////////////////////////////////
 //Object
-const jonasArray = [
-  "Jonas",
-  "Schmedtman",
-  2037 - 1991,
-  "teacher",
-  ["Michale", "Peter", "Steven"],
-];
+
+// const jonasArray = [
+//   "Jonas",
+//   "Schmedtman",
+//   2037 - 1991,
+//   "teacher",
+//   ["Michale", "Peter", "Steven"],
+// ];
+
+// const jonas = {
+//   fristName: "Jonas",
+//   lastName: "Schmedtman",
+//   age: 2037 - 1991,
+//   job: "teacher",
+//   friends: ["Michale", "Peter", "Steven"],
+// };
+
+// console.log(jonas);
+
+// console.log(jonas.lastName);
+// console.log(jonas["lastName"]);
+
+// const nameKey = "Name";
+// console.log(jonas[`frist` + nameKey]);
+// console.log(jonas[`last` + nameKey]);
+
+// const intrestedIn = prompt("waht do you want to know about Jonas?");
+
+// console.log(jonas[intrestedIn]);
+
+// if (jonas[intrestedIn]) {
+//   console.log(jonas[interestedIn]);
+// } else {
+//   console.log("Wrong request");
+// }
+
+// jonas.location = "Portugal";
+// jonas["twiter"] = "@jonasschmedtman";
+
+// console.log(jonas);
+
+// //Challange
+
+// console.log(
+//   `${jonas.fristName} have ${jonas.friends.length} friends, and his best friend is called ${jonas.friendsa[0]}`
+// );
+
+// ////////////////////////////////////
+//
 
 const jonas = {
   fristName: "Jonas",
   lastName: "Schmedtman",
-  age: 2037 - 1991,
+  birthYeah: 1991,
   job: "teacher",
   friends: ["Michale", "Peter", "Steven"],
+  hasDriverLicense: true,
+
+  // calcAge: function (birthYea) {
+  //
+  //   return 2037 - birthYeah;
+  // },
+
+  // calcAge: function (birthYea) {
+  //   console.log(this);
+  //   return 2037 - this.birthYeah;
+  // },
+  calcAge: function () {
+    this.age = 2037 - this.birthYeah;
+    return this.age;
+  },
+  getSummary: function () {
+    return `${this.fristName} is a ${this.calcAge()} ${this.job} and he has a ${
+      this.hasDriverLicense ? "a" : "no"
+    } driver's licence`;
+  },
 };
+
+console.log(jonas.calcAge());
+
+console.log(jonas.age);
+
+console.log(jonas.getSummary());
