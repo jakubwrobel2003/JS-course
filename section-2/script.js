@@ -286,36 +286,71 @@
 // ////////////////////////////////////
 //
 
-const jonas = {
-  fristName: "Jonas",
-  lastName: "Schmedtman",
-  birthYeah: 1991,
-  job: "teacher",
-  friends: ["Michale", "Peter", "Steven"],
-  hasDriverLicense: true,
+// const jonas = {
+//   fristName: "Jonas",
+//   lastName: "Schmedtman",
+//   birthYeah: 1991,
+//   job: "teacher",
+//   friends: ["Michale", "Peter", "Steven"],
+//   hasDriverLicense: true,
 
-  // calcAge: function (birthYea) {
-  //
-  //   return 2037 - birthYeah;
-  // },
+//   // calcAge: function (birthYea) {
+//   //
+//   //   return 2037 - birthYeah;
+//   // },
 
-  // calcAge: function (birthYea) {
-  //   console.log(this);
-  //   return 2037 - this.birthYeah;
-  // },
-  calcAge: function () {
-    this.age = 2037 - this.birthYeah;
-    return this.age;
+//   // calcAge: function (birthYea) {
+//   //   console.log(this);
+//   //   return 2037 - this.birthYeah;
+//   // },
+//   calcAge: function () {
+//     this.age = 2037 - this.birthYeah;
+//     return this.age;
+//   },
+//   getSummary: function () {
+//     return `${this.fristName} is a ${this.calcAge()} ${this.job} and he has a ${
+//       this.hasDriverLicense ? "a" : "no"
+//     } driver's licence`;
+//   },
+// };
+
+// console.log(jonas.calcAge());
+
+// console.log(jonas.age);
+
+// console.log(jonas.getSummary());
+
+// ////////////////////////////////////
+// //Challange #3
+// ////////////////////////////////////
+const John = {
+  firstname: "John",
+  lastname: "Smith",
+  fullname: "John Smith",
+  weight: 92,
+  hight: 1.95,
+  calcBMI: function () {
+    return this.weight / (this.hight * this.hight);
   },
-  getSummary: function () {
-    return `${this.fristName} is a ${this.calcAge()} ${this.job} and he has a ${
-      this.hasDriverLicense ? "a" : "no"
-    } driver's licence`;
+};
+const Mark = {
+  firstname: "Mark",
+  lastname: "Miller",
+  fullname: "Mark Miller",
+  weight: 78,
+  hight: 1.69,
+  calcBMI: function () {
+    return this.weight / (this.hight * this.hight);
   },
 };
 
-console.log(jonas.calcAge());
-
-console.log(jonas.age);
-
-console.log(jonas.getSummary());
+console.log(
+  `${John.calcBMI() > Mark.calcBMI() ? John.fullname : Mark.fullname}'s BMI (${
+    John.calcBMI() > Mark.calcBMI() ? John.calcBMI() : Mark.calcBMI()
+  })
+    is higher than ${
+      John.calcBMI() < Mark.calcBMI() ? John.fullname : Mark.fullname
+    }'s 
+    (${John.calcBMI() < Mark.calcBMI() ? John.calcBMI() : Mark.calcBMI()})
+    `
+);
