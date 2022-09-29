@@ -323,34 +323,41 @@
 // ////////////////////////////////////
 // //Challange #3
 // ////////////////////////////////////
-const John = {
-  firstname: "John",
-  lastname: "Smith",
-  fullname: "John Smith",
-  weight: 92,
-  hight: 1.95,
-  calcBMI: function () {
-    return this.weight / (this.hight * this.hight);
-  },
-};
-const Mark = {
-  firstname: "Mark",
-  lastname: "Miller",
-  fullname: "Mark Miller",
-  weight: 78,
-  hight: 1.69,
-  calcBMI: function () {
-    return this.weight / (this.hight * this.hight);
-  },
-};
+// const John = {
+//   firstname: "John",
+//   lastname: "Smith",
+//   fullname: "John Smith",
+//   weight: 92,
+//   hight: 1.95,
+//   calcBMI: function () {
+//     return this.weight / (this.hight * this.hight);
+//   },
+// };
+// const Mark = {
+//   firstname: "Mark",
+//   lastname: "Miller",
+//   fullname: "Mark Miller",
+//   weight: 78,
+//   hight: 1.69,
+//   calcBMI: function () {
+//     return this.weight / (this.hight * this.hight);
+//   },
+// };
 
-console.log(
-  `${John.calcBMI() > Mark.calcBMI() ? John.fullname : Mark.fullname}'s BMI (${
-    John.calcBMI() > Mark.calcBMI() ? John.calcBMI() : Mark.calcBMI()
-  })
-    is higher than ${
-      John.calcBMI() < Mark.calcBMI() ? John.fullname : Mark.fullname
-    }'s 
-    (${John.calcBMI() < Mark.calcBMI() ? John.calcBMI() : Mark.calcBMI()})
-    `
-);
+// console.log(
+//   `${John.calcBMI() > Mark.calcBMI() ? John.fullname : Mark.fullname}'s BMI (${
+//     John.calcBMI() > Mark.calcBMI() ? John.calcBMI() : Mark.calcBMI()
+//   })
+//     is higher than ${
+//       John.calcBMI() < Mark.calcBMI() ? John.fullname : Mark.fullname
+//     }'s
+//     (${John.calcBMI() < Mark.calcBMI() ? John.calcBMI() : Mark.calcBMI()})
+//     `
+// );
+
+// ////////////////////////////////////
+// LOOP
+
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repetitions  ${rep}`);
+// }
