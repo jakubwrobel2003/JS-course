@@ -361,3 +361,50 @@
 // for (let rep = 1; rep <= 10; rep++) {
 //   console.log(`Lifting weights repetitions  ${rep}`);
 // }
+
+// const jonasArray = [
+//   "Jonas",
+//   "Schmedtman",
+//   2037 - 1991,
+//   "teacher",
+//   ["Michale", "Peter", "Steven"],
+//   true,
+// ];
+// const types = [];
+// for (let i = 0; i < jonasArray.length; i++) {
+//   //reading
+//   console.log(jonasArray[i], typeof jonasArray[i]);
+//   //dopisywanie
+//   // types[i] = typeof jonasArray[i];
+//   types.push(typeof jonasArray[i]);
+// }
+// console.log(types);
+
+// const years = [1991, 2007, 1969, 2020];
+// const ages = [];
+// for (let i = 0; i < years.length; i++) {
+//   ages.push(2037 - years[i]);
+// }
+// console.log(ages);
+// //contiuue and break
+
+// for (let i = 0; i < jonasArray.length; i++) {
+//   if (typeof jonasArray[i] !== "string") continue;
+//   console.log(jonasArray[i], typeof jonasArray[i]);
+// }
+// console.log("---Break with number---");
+// for (let i = 0; i < jonasArray.length; i++) {
+//   if (typeof jonasArray[i] === "number") break;
+//   console.log(jonasArray[i], typeof jonasArray[i]);
+// }
+
+const jonasArray = [
+  "Jonas",
+  "Schmedtman",
+  2037 - 1991,
+  "teacher",
+  ["Michale", "Peter", "Steven"],
+];
+for (let i = jonasArray.length - 1; i >= 0; i--) {
+  console.log(jonasArray[i]);
+}
