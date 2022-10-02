@@ -42,18 +42,30 @@
 // };
 // console.log(calcTempAmplitudeNew([1, 2, 6], [-1, 20, 4]));
 
-const measuerKelvin = function () {
-  const measuerement = {
-    type: 'temp',
-    unit: 'celsius',
-    value: Number(prompt('Degrees celsius')),
-  };
-  // console.log(measuerement);
-  // console.log(measuerement.value);
-  // console.warn(measuerement.value);
-  // console.error(measuerement.value);
-  const kelvin = measuerement.value + 237;
-  return kelvin;
+// const measuerKelvin = function () {
+//   const measuerement = {
+//     type: 'temp',
+//     unit: 'celsius',
+//     value: Number(prompt('Degrees celsius')),
+//   };
+//   // console.log(measuerement);
+//   // console.log(measuerement.value);
+//   // console.warn(measuerement.value);
+//   // console.error(measuerement.value);
+//   const kelvin = measuerement.value + 237;
+//   return kelvin;
+// };
+// // A) indentify
+// console.log(measuerKelvin());
+
+const temperatures = [17, 21, 23];
+
+const printForecast = function (temps) {
+  let text = '';
+  for (let i = 0; i < temps.length; i++) {
+    const curtemp = temps[i];
+    text = text + `... ${curtemp} C in ${i + 1} days`;
+  }
+  return text;
 };
-// A) indentify
-console.log(measuerKelvin());
+console.log(printForecast(temperatures));
