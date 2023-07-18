@@ -41,32 +41,64 @@ const restaurant = {
     console.log(otherIngredient);
   },
 };
-const ordersSet = new Set([
-  'Pasta',
-  'Pizza',
-  'Pizza',
-  'Risotto',
-  'Pasta',
-  'Pizza',
+
+const question = new Map([
+  ['question', 'What is the best programing langueage in the world?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'javaScript'],
+  ['correct', 3],
+  [true, 'Correct'],
+  [false, 'Try again'],
 ]);
-console.log(ordersSet);
-console.log(new Set('Jonas'));
-console.log(ordersSet.size);
-console.log(ordersSet.has('Pizza'));
-console.log(ordersSet.has('Bread'));
-ordersSet.add('Garlic Bread');
-console.log(ordersSet);
-ordersSet.delete('Risotto');
-console.log(ordersSet[0]);
-console.log(ordersSet);
-for (const order of ordersSet) console.log(order);
-// Example
-const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
-const staffUnique = [...new Set(staff)];
-console.log(staffUnique);
-console.log(...staffUnique);
-console.log(new Set(staff).size);
-console.log(new Set(`kubawrobel`).size);
+console.log(question);
+//covert object to map
+console.log(...Object.entries(openingHours));
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
+///quiz app
+console.log(question.get('question'));
+for (const [key, values] of question) {
+  if (typeof key === 'number') console.log(`Answer ${key}: ${values}`);
+}
+// const answer = Number(prompt('Your answer'));
+// console.log(answer);
+const answer = 3;
+console.log(question.get(question.get('correct') === answer));
+
+///covert map to arr
+console.log([...question]);
+// console.log(question.entries());
+console.log([...question.keys()]);
+console.log([...question.values()]);
+///////////////////////////////
+// /////////////////////
+// const ordersSet = new Set([
+//   'Pasta',
+//   'Pizza',
+//   'Pizza',
+//   'Risotto',
+//   'Pasta',
+//   'Pizza',
+// ]);
+// console.log(ordersSet);
+// console.log(new Set('Jonas'));
+// console.log(ordersSet.size);
+// console.log(ordersSet.has('Pizza'));
+// console.log(ordersSet.has('Bread'));
+// ordersSet.add('Garlic Bread');
+// console.log(ordersSet);
+// ordersSet.delete('Risotto');
+// console.log(ordersSet[0]);
+// console.log(ordersSet);
+// for (const order of ordersSet) console.log(order);
+// // Example
+// const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+// const staffUnique = [...new Set(staff)];
+// console.log(staffUnique);
+// console.log(...staffUnique);
+// console.log(new Set(staff).size);
+// console.log(new Set(`kubawrobel`).size);
 // const game = {
 //   team1: 'Bayern Munich',
 //   team2: 'Borrussia Dortmund',
