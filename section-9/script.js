@@ -42,35 +42,35 @@ const restaurant = {
   },
 };
 
-const question = new Map([
-  ['question', 'What is the best programing langueage in the world?'],
-  [1, 'C'],
-  [2, 'Java'],
-  [3, 'javaScript'],
-  ['correct', 3],
-  [true, 'Correct'],
-  [false, 'Try again'],
-]);
-console.log(question);
-//covert object to map
-console.log(...Object.entries(openingHours));
-const hoursMap = new Map(Object.entries(openingHours));
-console.log(hoursMap);
-///quiz app
-console.log(question.get('question'));
-for (const [key, values] of question) {
-  if (typeof key === 'number') console.log(`Answer ${key}: ${values}`);
-}
-// const answer = Number(prompt('Your answer'));
-// console.log(answer);
-const answer = 3;
-console.log(question.get(question.get('correct') === answer));
+// const question = new Map([
+//   ['question', 'What is the best programing langueage in the world?'],
+//   [1, 'C'],
+//   [2, 'Java'],
+//   [3, 'javaScript'],
+//   ['correct', 3],
+//   [true, 'Correct'],
+//   [false, 'Try again'],
+// ]);
+// console.log(question);
+// //covert object to map
+// console.log(...Object.entries(openingHours));
+// const hoursMap = new Map(Object.entries(openingHours));
+// console.log(hoursMap);
+// ///quiz app
+// console.log(question.get('question'));
+// for (const [key, values] of question) {
+//   if (typeof key === 'number') console.log(`Answer ${key}: ${values}`);
+// }
+// // const answer = Number(prompt('Your answer'));
+// // console.log(answer);
+// const answer = 3;
+// console.log(question.get(question.get('correct') === answer));
 
-///covert map to arr
-console.log([...question]);
-// console.log(question.entries());
-console.log([...question.keys()]);
-console.log([...question.values()]);
+// ///covert map to arr
+// console.log([...question]);
+// // console.log(question.entries());
+// console.log([...question.keys()]);
+// console.log([...question.values()]);
 ///////////////////////////////
 // /////////////////////
 // const ordersSet = new Set([
