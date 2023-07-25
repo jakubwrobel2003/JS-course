@@ -1,4 +1,6 @@
 {
   "liveServer.settings.port": 0,
-  "liveServer.settings.mount": []
+  "liveServer.settings.mount": [],
+  "editor.renderWhitespace": "selection",
+  "editor.fontSize": 14
 }
