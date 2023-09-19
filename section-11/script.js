@@ -100,7 +100,7 @@ const calcDisplaySummary = function (acc) {
     .filter(mov => mov > 0)
     .map(deposit => (deposit * acc.interestRate) / 100)
     .filter((int, i, arr) => {
-      console.log(arr);
+      // console.log(arr);
       return int >= 1;
     })
     .reduce((acc, int) => acc + int, 0);
@@ -135,9 +135,9 @@ btnLogin.addEventListener(`click`, function (e) {
   currentAccount = accounts.find(
     acc => acc.username === inputLoginUsername.value
   );
-  console.log(currentAccount);
+  // console.log(currentAccount);
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
-    console.log(`login`);
+    // console.log(`login`);
 
     labelWelcome.textContent = `Welcome back, ${
       currentAccount.owner.split(` `)[0]
@@ -190,7 +190,7 @@ btnClose.addEventListener('click', function (e) {
     const index = accounts.findIndex(
       acc => acc.username === currentAccount.username
     );
-    console.log(index);
+    // console.log(index);
     accounts.splice(index, 1);
     containerApp.style.opacity = 0;
   }
@@ -402,29 +402,142 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // console.log(movements);
 // movements.sort((a, b) => b - a);
 // console.log(movements);
-const arr = [1, 2, 3, 4, 5, 6, 7];
-console.log(new Array(1, 2, 3, 4, 5, 6, 7));
-//empty arr +fill method
-const x = new Array(7);
-console.log(x);
-console.log(x.map(() => 5));
-x.fill(1, 3, 5);
-x.fill(1);
-console.log(x);
-arr.fill(23, 4, 6);
-console.log(arr);
+// const arr = [1, 2, 3, 4, 5, 6, 7];
+// console.log(new Array(1, 2, 3, 4, 5, 6, 7));
+// //empty arr +fill method
+// const x = new Array(7);
+// console.log(x);
+// console.log(x.map(() => 5));
+// x.fill(1, 3, 5);
+// x.fill(1);
+// console.log(x);
+// arr.fill(23, 4, 6);
+// console.log(arr);
 
-// array from
-const y = Array.from({ length: 7 }, () => 1);
-console.log(y);
-const z = Array.from({ length: 7 }, (_, i) => i + 1);
-console.log(z);
+// // array from
+// const y = Array.from({ length: 7 }, () => 1);
+// console.log(y);
+// const z = Array.from({ length: 7 }, (_, i) => i + 1);
+// console.log(z);
 
-labelBalance.addEventListener(`click`, function () {
-  const movementsUI = Array.from(
-    document.querySelectorAll(`.movements__value`),
-    el => el.textContent.replace(`€`, '')
-  );
-  console.log(movementsUI);
-  const movementsUI2 = [...document.querySelectorAll(`.movements__value`)];
+// labelBalance.addEventListener(`click`, function () {
+//   const movementsUI = Array.from(
+//     document.querySelectorAll(`.movements__value`),
+//     el => el.textContent.replace(`€`, '')
+//   );
+//   console.log(movementsUI);
+//   const movementsUI2 = [...document.querySelectorAll(`.movements__value`)];
+// });
+
+//1
+const bankDepositSum = accounts
+  .flatMap(acc => acc.movements)
+  .filter(mov => mov > 0)
+  .reduce((sum, cur) => sum + cur, 0);
+console.log(bankDepositSum);
+//2
+// const numDeposits1000 = accounts
+//   .flatMap(acc => acc.movements)
+//   .filter(mov => mov > 1000).length;
+// const numDeposits1000 = accounts
+//   .flatMap(acc => acc.movements)
+//   .reduce((sum, cur) => (cur >= 1000 ? sum + 1 : sum), 0);
+// console.log(numDeposits1000);
+
+// let a = 10;
+// console.log(++a);
+// //3
+// const sums = accounts
+//   .flatMap(acc => acc.movements)
+//   .reduce(
+//     (sums, cur) => {
+//       // cur > 0 ? (sums.deposit += cur) : (sums.withdrawals += cur);
+//       sums[cur > 0 ? 'deposit' : 'withdrawals'] += cur;
+//       return sums;
+//     },
+//     { deposit: 0, withdrawals: 0 }
+//   );
+// console.log(sums);
+
+// //4
+
+// const convertTitleCase = function (title) {
+//   const capitzalize = str => str[0].toUpperCase() + str.slice(1);
+//   const excections = [`a`, `an`, 'the', 'but', 'or', `on`, `in`, `with`];
+//   const titleCase = title
+//     .toLowerCase()
+//     .split(` `)
+//     .map(word => (excections.includes(word) ? word : capitzalize(word)))
+//     .join(' ');
+//   return capitzalize(titleCase);
+// };
+
+// console.log(convertTitleCase(`a this is a nice title`));
+// console.log(convertTitleCase(`this is a LONG title`));
+// console.log(convertTitleCase(`this is a nice title and this EXAMPLE`));
+
+//Test data
+const dogs = [
+  {
+    weight: 22,
+    curFood: 250,
+    owners: [`Alice`, `Bob`],
+  },
+  {
+    weight: 8,
+    curFood: 200,
+    owners: [`Matilda`],
+  },
+  {
+    weight: 13,
+    curFood: 275,
+    owners: [`Sarah`],
+  },
+  {
+    weight: 32,
+    curFood: 340,
+    owners: [`Michael`],
+  },
+];
+
+const dogEatGood = function (dog) {
+  if (
+    dog.curFood > dog.recommendedFood * 0.9 &&
+    dog.curFood < dog.recommendedFood * 1.1
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+dogs.forEach(function (dog) {
+  dog.recommendedFood = Math.round(dog.weight ** 0.75 * 28);
+
+  if (dog.owners == dog.owners.includes(`Sarah`)) console.log(`yes`);
 });
+console.log(dogs);
+const ownersEatTooMuch = dogs
+  .filter(dog => dog.curFood > dog.recommendedFood)
+  .map(dog => dog.owners)
+  .flat();
+const ownersEatTooLittle = dogs
+  .filter(dog => dog.curFood < dog.recommendedFood)
+  .map(dog => dog.owners)
+  .flat();
+
+console.log(dogs.some(dog => dog.currFood === dog.recommendedFood));
+
+const checkEatingOkay = dog =>
+  dog.curFood > dog.recommendedFood * 0.9 &&
+  dog.curFood < dog.recommendedFood * 1.1;
+console.log(dogs.some(checkEatingOkay));
+console.log(dogs.filter(checkEatingOkay));
+console.log(ownersEatTooLittle, ownersEatTooMuch);
+console.log(`${ownersEatTooMuch.join(` and `)}'s dogs eat too much!`);
+console.log(`${ownersEatTooLittle.join(` and `)}'s dogs eat too little!`);
+
+const dogsCopy = dogs
+  .slice()
+  .sort((a, b) => a.recommendedFood - b.recommendedFood);
+console.log(dogsCopy);
