@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+    <title>TO DO LIST</title>
+  </head>
+  <body>
+    <nav>
+      <h1>TO DO LIST</h1>
+    </nav>
+    <main>
+      <section class="idea">
+        <div class="todobox" data-postion="0">
+          <p class="title">Zrobic zakupy</p>
+          <p class="task-info">kupić mleko</p>
+          <div class="box-btn"></div>
+          <button class="btn-prev">Delete</button>
+          <button class="btn-next">Next</button>
+        </div>
+      </section>
+      <section class="in_proggrss"></section>
+      <section class="finish"></section>
+    </main>
+    <div class="create-box">
+      <p>Create Task</p>
+      <input class="title-input" placeholder="Title" type="text" />
+      <input class="info-input" placeholder="More information" type="text" />
+
+      <button class="btn-create">Create</button>
+    </div>
+  </body>
+</html>
